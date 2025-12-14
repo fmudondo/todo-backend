@@ -1,7 +1,7 @@
-
-
 const mysql = require("mysql2");
 require("dotenv").config();
+
+console.log("DB_HOST:", process.env.DB_HOST); // TEMP DEBUG
 
 const db = mysql.createConnection({
   host: process.env.DB_HOST,
@@ -19,4 +19,3 @@ db.connect((err) => {
 });
 
 module.exports = db;
-
